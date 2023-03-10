@@ -34,7 +34,7 @@ const Quiz = ({ expiryTimestamp }) => {
   const loadQuestion = async () => {
     if (questionNo <= 14) {
       axios
-        .get(`http://127.0.0.1:4000/api/question/${questionNo}`)
+        .get(`https://quiz-app-backend-as2c.onrender.com/api/question/${questionNo}`)
         .then((res) => {
           setQuestion(res.data);
           setIsStart(true);
