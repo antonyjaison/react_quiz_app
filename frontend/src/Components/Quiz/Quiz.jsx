@@ -30,11 +30,12 @@ const Quiz = ({ expiryTimestamp }) => {
     loadQuestion();
   };
 
-
   const loadQuestion = async () => {
     if (questionNo <= 14) {
       axios
-        .get(`https://quiz-app-backend-as2c.onrender.com/api/question/${questionNo}`)
+        .get(
+          `https://quiz-app-backend-as2c.onrender.com/api/question/${questionNo}`
+        )
         .then((res) => {
           setQuestion(res.data);
           setIsStart(true);
@@ -76,8 +77,6 @@ const Quiz = ({ expiryTimestamp }) => {
       }, 1000);
     }
   };
-
-
 
   const timerSvg = (
     <svg
@@ -149,6 +148,11 @@ const Quiz = ({ expiryTimestamp }) => {
                     <p className="option">D.</p>
                     <p className="qs">{question.d.ans}</p>
                   </div>
+                </div>
+                <div className="created_name_wrapper">
+                  <a href="https://www.instagram.com/antony_jaison__/">
+                    Antony Jaison
+                  </a>
                 </div>
               </div>
             </div>
